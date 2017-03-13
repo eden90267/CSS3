@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3</title>
+	<style type="text/css">
+		div {
+			background-color: red;
+			width: 500px;
+			height: 200px;
+			text-align: center;
+			font-size: 100px;
+		    padding-top: 50px;
+		    transition: width 2s;
+		}
+		div:hover {
+			width: 1000px;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		var timer;
+		var myDiv = $("div").eq(0);
+		myDiv.mouseover(function(e) {
+			timer = setInterval(function() {
+				myDiv.html(myDiv[0].scrollWidth);
+				if (myDiv[0].scrollWidth === 500) {
+					clearInterval(timer);
+				}
+			}, 100);
+		});
+	</script>
+</body>
+</html>
