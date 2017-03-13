@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3</title>
+	<style type="text/css">
+		div {
+			width: 300px;
+			height: 200px;
+			margin: 100px 0 0 100px;
+			background-color: green;
+		}
+		img#wheel1 {
+			margin: -40px 0 0 140px;
+		}
+		img#wheel2{
+			margin: -40px 0 0 70px;
+		}
+
+		@-webkit-keyframes rotate1 {
+			0% {
+				-webkit-transform: rotate(360deg);
+			}
+			100% {
+				-webkit-transform: rotate(0deg);
+			}
+		}
+		img#wheel1, img#wheel2 {
+			-webkit-animation-name: rotate1;
+			-webkit-animation-duration: 3s;
+			-webkit-animation-timing-function: linear;
+			-webkit-animation-iteration-count: infinite;
+		}
+	</style>
+</head>
+<body>
+	<div id="rect"></div>
+	<img id="wheel1" src="img/tires.png">
+	<img id="wheel2" src="img/tires.png">
+</body>
+</html>
