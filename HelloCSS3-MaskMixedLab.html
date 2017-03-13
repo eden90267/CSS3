@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3</title>
+	<style type="text/css">
+		select {
+			text-align: left;
+			font-size: 30px;
+			margin: 50px;
+			margin-left: 300px;
+		}
+	</style>
+</head>
+<body>
+
+	<img src="img/24.jpg"><br>
+	<select id="mySelection">
+		<option value="0">請選擇效果</option>
+		<option value="1">橢圓形</option>
+		<option value="2">郵票型邊框</option>
+		<option value="3">光暈邊框</option>
+		<option value="4">圓角型邊框</option>
+	</select>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		var mySelection = $("#mySelection");
+		var myImg = $("img").eq(0);
+		mySelection.change(function(e) {
+			switch(parseInt($(e.target).val())) {
+				case 1:
+				myImg.css("-webkit-mask-box-image", "");
+				myImg.css("-webkit-mask-image", "url(img/51.jpg)");
+				myImg.css("border-radius", "");
+				break;
+				case 2:
+			    myImg.css("-webkit-mask-box-image", "url(img/51.jpg) 30 30 30 30 round round");
+				myImg.css("-webkit-mask-image", "");
+				myImg.css("border-radius", "");
+				break;
+				case 3:
+				myImg.css("-webkit-mask-box-image", "url(img/51.jpg) 30 30 30 30 round round");
+				myImg.css("-webkit-mask-image", "");
+				myImg.css("border-radius", "");
+				break;
+				case 4:
+				myImg.css("-webkit-mask-box-image", "");
+				myImg.css("-webkit-mask-image", "");
+				myImg.css("border-radius", "50%");
+				break;
+				default:
+				myImg.css("-webkit-mask-box-image", "");
+				myImg.css("-webkit-mask-image", "");
+				myImg.css("border-radius", "");
+				break;
+			}
+		})
+	</script>
+</body>
+</html>
