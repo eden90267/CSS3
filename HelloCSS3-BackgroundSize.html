@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3</title>
+	<style type="text/css">
+		body {
+			background-image: /* url(../img/24.jpg),  */url(../img/guy-bowden.jpg);
+			background-repeat: no-repeat;
+			/* background-size: 300px 200px; */
+			background-size: cover;
+			height: 100vh;
+		}
+		button {
+			width: 100px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<button id="GirlBtn">Girl</button>
+	<button id="PandaBtn">Panda</button>
+	<button id="BothBtn">Both</button>
+	<button id="ResetBtn">Reset</button>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$('#GirlBtn').click(function(e) {
+			$(document.body).css('background-image', 'url(../img/24.jpg),url(../img/guy-bowden.jpg)');
+		});
+		$('#PandaBtn').click(function(e) {
+			$(document.body).css('background-image', 'url(../img/51.jpg),url(../img/guy-bowden.jpg)');
+		});
+		$('#BothBtn').click(function(e) {
+			$(document.body).css('background-image', 'url(../img/24.jpg),url(../img/51.jpg),url(../img/guy-bowden.jpg)');
+		});
+		$('#ResetBtn').click(function(e) {
+			$(document.body).css('background-image', 'url(../img/guy-bowden.jpg)');
+		});
+	</script>
+</body>
+</html>
